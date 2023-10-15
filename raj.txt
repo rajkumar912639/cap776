@@ -1,0 +1,9 @@
+I’m sorry, I don’t understand what you’re asking for. 
+Could you please provide more information or clarify your request? If you have a specific topic in mind,
+ I’d be happy to help you write a paragraph on it.
+ Please let me know.
+//import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+data = pd.read_csv("C:/Users/PC/Downloads/AmesHousing.csv")
+data

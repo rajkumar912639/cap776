@@ -1,0 +1,657 @@
+var _JUPYTERLAB;
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "webpack/container/entry/anaconda-assistant":
+/*!***********************!*\
+  !*** container entry ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var moduleMap = {
+	"./index": () => {
+		return Promise.all([__webpack_require__.e("vendors-node_modules_emotion_cache_dist_emotion-cache_browser_esm_js"), __webpack_require__.e("vendors-node_modules_emotion_memoize_dist_emotion-memoize_esm_js-node_modules_mui_material_Sw-53a992"), __webpack_require__.e("vendors-node_modules_jupyterlab_services_lib_kernel_messages_js-node_modules_zustand_esm_midd-34c8d8"), __webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-_8f22"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-webpack_sharing_consume_default_e-2f734f"), __webpack_require__.e("lib_components_assistant-button_js-lib_index_js-webpack_sharing_consume_default_lumino_coreut-d886ec")]).then(() => (() => ((__webpack_require__(/*! ./lib/index.js */ "./lib/index.js")))));
+	},
+	"./extension": () => {
+		return Promise.all([__webpack_require__.e("vendors-node_modules_emotion_cache_dist_emotion-cache_browser_esm_js"), __webpack_require__.e("vendors-node_modules_emotion_memoize_dist_emotion-memoize_esm_js-node_modules_mui_material_Sw-53a992"), __webpack_require__.e("vendors-node_modules_jupyterlab_services_lib_kernel_messages_js-node_modules_zustand_esm_midd-34c8d8"), __webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-_8f22"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-webpack_sharing_consume_default_e-2f734f"), __webpack_require__.e("lib_components_assistant-button_js-lib_index_js-webpack_sharing_consume_default_lumino_coreut-d886ec")]).then(() => (() => ((__webpack_require__(/*! ./lib/index.js */ "./lib/index.js")))));
+	},
+	"./style": () => {
+		return Promise.all([__webpack_require__.e("vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_cssW-72eba1"), __webpack_require__.e("style_index_js")]).then(() => (() => ((__webpack_require__(/*! ./style/index.js */ "./style/index.js")))));
+	}
+};
+var get = (module, getScope) => {
+	__webpack_require__.R = getScope;
+	getScope = (
+		__webpack_require__.o(moduleMap, module)
+			? moduleMap[module]()
+			: Promise.resolve().then(() => {
+				throw new Error('Module "' + module + '" does not exist in container.');
+			})
+	);
+	__webpack_require__.R = undefined;
+	return getScope;
+};
+var init = (shareScope, initScope) => {
+	if (!__webpack_require__.S) return;
+	var name = "default"
+	var oldScope = __webpack_require__.S[name];
+	if(oldScope && oldScope !== shareScope) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
+	__webpack_require__.S[name] = shareScope;
+	return __webpack_require__.I(name, initScope);
+};
+
+// This exports getters to disallow modifications
+__webpack_require__.d(exports, {
+	get: () => (get),
+	init: () => (init)
+});
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = __webpack_module_cache__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/ensure chunk */
+/******/ 	(() => {
+/******/ 		__webpack_require__.f = {};
+/******/ 		// This file contains only the entry chunk.
+/******/ 		// The chunk loading function for additional chunks
+/******/ 		__webpack_require__.e = (chunkId) => {
+/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
+/******/ 				__webpack_require__.f[key](chunkId, promises);
+/******/ 				return promises;
+/******/ 			}, []));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get javascript chunk filename */
+/******/ 	(() => {
+/******/ 		// This function allow to reference async chunks
+/******/ 		__webpack_require__.u = (chunkId) => {
+/******/ 			// return url for filenames based on template
+/******/ 			return "" + chunkId + "." + {"vendors-node_modules_emotion_cache_dist_emotion-cache_browser_esm_js":"2487c15a7309edbc1888","vendors-node_modules_emotion_memoize_dist_emotion-memoize_esm_js-node_modules_mui_material_Sw-53a992":"361774aa3f28f64c9451","vendors-node_modules_jupyterlab_services_lib_kernel_messages_js-node_modules_zustand_esm_midd-34c8d8":"0288749c2313378e3c3e","webpack_sharing_consume_default_react":"b6c59c7a3a0cc23eb309","webpack_sharing_consume_default_emotion_react_emotion_react-_8f22":"cc6b20d3607c4b34dee4","webpack_sharing_consume_default_emotion_react_emotion_react-webpack_sharing_consume_default_e-2f734f":"7516f2b1173abc0246fa","lib_components_assistant-button_js-lib_index_js-webpack_sharing_consume_default_lumino_coreut-d886ec":"8bb10e3178461f6baf01","vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_cssW-72eba1":"638c51c083419c391277","style_index_js":"9ddcfd22455994cc8516","vendors-node_modules_datadog_browser-logs_esm_entries_main_js":"c1fb4eed2e35f73dfe1d","vendors-node_modules_emotion_serialize_dist_emotion-serialize_browser_esm_js-node_modules_emo-cbc221":"03ea5ebce197f213201d","vendors-node_modules_emotion_react_dist_emotion-react_browser_esm_js":"9d4dc64c8e61ae0b9697","node_modules_babel_runtime_helpers_esm_extends_js-node_modules_emotion_memoize_dist_emotion-m-27ec560":"cb5f876fb2d1d13da9a7","vendors-node_modules_emotion_styled_dist_emotion-styled_browser_esm_js":"4acc662cf4ec4d999001","webpack_sharing_consume_default_emotion_react_emotion_react-_1cec":"9029ba45c05174411ff7","node_modules_babel_runtime_helpers_esm_extends_js-node_modules_emotion_memoize_dist_emotion-m-27ec561":"76d42e4a39d030e8da1e","vendors-node_modules_mui_material_index_js":"e2409bfa9ddd2f251d3a","webpack_sharing_consume_default_react-dom":"3eababab10c1c9a76233","webpack_sharing_consume_default_popperjs_core_popperjs_core-_d4b1":"eb9b1fc77e7499d1e4f6","vendors-node_modules_nem035_gpt-3-encoder_index_js":"dcb8895c01378793148c","vendors-node_modules_popperjs_core_lib_index_js":"c3e0ac9dc53bd58bf3f8","vendors-node_modules_react-spring_web_dist_esm_index_js":"33164ae2743f34ab3e10","vendors-node_modules_immer_dist_immer_mjs":"4cfdaffec89fb087d4f8","vendors-node_modules_launchdarkly-js-client-sdk_dist_ldclient_es_js":"a122db32b9149dc6d9aa","vendors-node_modules_lodash_lodash_js":"438e51453b602de7bad4","vendors-node_modules_prism-react-renderer_dist_index_js":"f869248b06c8de80f2df","node_modules_react-error-boundary_dist_react-error-boundary_esm_js-_4d950":"830c7aea895d9a4e80d7","vendors-node_modules_react-popper_lib_esm_index_js":"48f3b0283a0bd655ea62","webpack_sharing_consume_default_popperjs_core_popperjs_core-_5036":"bd9bec4e72aaf92c690e","node_modules_use-resize-observer_dist_bundle_esm_js-_df660":"e7fd215fb5d5d70a03c8","vendors-node_modules_usehooks-ts_dist_esm_index_js":"d67ee2b3d4aea7d64b8e","vendors-node_modules_uuid_dist_esm-browser_index_js":"fe0bd491a21746dce9fb","vendors-node_modules_zod_lib_index_mjs":"7002a3f29d3fd87e449f","vendors-node_modules_zustand_esm_index_mjs":"7be5f8973832a4d7d54a","node_modules_react-error-boundary_dist_react-error-boundary_esm_js-_4d951":"67f19cc69ec80788ef7f","node_modules_use-resize-observer_dist_bundle_esm_js-_df661":"13aa98fc52c9b002122b"}[chunkId] + ".js";
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/load script */
+/******/ 	(() => {
+/******/ 		var inProgress = {};
+/******/ 		var dataWebpackPrefix = "anaconda-assistant:";
+/******/ 		// loadScript function to load a script via script tag
+/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
+/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
+/******/ 			var script, needAttach;
+/******/ 			if(key !== undefined) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				for(var i = 0; i < scripts.length; i++) {
+/******/ 					var s = scripts[i];
+/******/ 					if(s.getAttribute("src") == url || s.getAttribute("data-webpack") == dataWebpackPrefix + key) { script = s; break; }
+/******/ 				}
+/******/ 			}
+/******/ 			if(!script) {
+/******/ 				needAttach = true;
+/******/ 				script = document.createElement('script');
+/******/ 		
+/******/ 				script.charset = 'utf-8';
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
+/******/ 				}
+/******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
+/******/ 				script.src = url;
+/******/ 			}
+/******/ 			inProgress[url] = [done];
+/******/ 			var onScriptComplete = (prev, event) => {
+/******/ 				// avoid mem leaks in IE.
+/******/ 				script.onerror = script.onload = null;
+/******/ 				clearTimeout(timeout);
+/******/ 				var doneFns = inProgress[url];
+/******/ 				delete inProgress[url];
+/******/ 				script.parentNode && script.parentNode.removeChild(script);
+/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
+/******/ 				if(prev) return prev(event);
+/******/ 			};
+/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
+/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
+/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
+/******/ 			needAttach && document.head.appendChild(script);
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/sharing */
+/******/ 	(() => {
+/******/ 		__webpack_require__.S = {};
+/******/ 		var initPromises = {};
+/******/ 		var initTokens = {};
+/******/ 		__webpack_require__.I = (name, initScope) => {
+/******/ 			if(!initScope) initScope = [];
+/******/ 			// handling circular init calls
+/******/ 			var initToken = initTokens[name];
+/******/ 			if(!initToken) initToken = initTokens[name] = {};
+/******/ 			if(initScope.indexOf(initToken) >= 0) return;
+/******/ 			initScope.push(initToken);
+/******/ 			// only runs once
+/******/ 			if(initPromises[name]) return initPromises[name];
+/******/ 			// creates a new share scope if needed
+/******/ 			if(!__webpack_require__.o(__webpack_require__.S, name)) __webpack_require__.S[name] = {};
+/******/ 			// runs all init snippets from all modules reachable
+/******/ 			var scope = __webpack_require__.S[name];
+/******/ 			var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
+/******/ 			var uniqueName = "anaconda-assistant";
+/******/ 			var register = (name, version, factory, eager) => {
+/******/ 				var versions = scope[name] = scope[name] || {};
+/******/ 				var activeVersion = versions[version];
+/******/ 				if(!activeVersion || (!activeVersion.loaded && (!eager != !activeVersion.eager ? eager : uniqueName > activeVersion.from))) versions[version] = { get: factory, from: uniqueName, eager: !!eager };
+/******/ 			};
+/******/ 			var initExternal = (id) => {
+/******/ 				var handleError = (err) => (warn("Initialization of sharing external failed: " + err));
+/******/ 				try {
+/******/ 					var module = __webpack_require__(id);
+/******/ 					if(!module) return;
+/******/ 					var initFn = (module) => (module && module.init && module.init(__webpack_require__.S[name], initScope))
+/******/ 					if(module.then) return promises.push(module.then(initFn, handleError));
+/******/ 					var initResult = initFn(module);
+/******/ 					if(initResult && initResult.then) return promises.push(initResult['catch'](handleError));
+/******/ 				} catch(err) { handleError(err); }
+/******/ 			}
+/******/ 			var promises = [];
+/******/ 			switch(name) {
+/******/ 				case "default": {
+/******/ 					register("@datadog/browser-logs", "4.42.2", () => (__webpack_require__.e("vendors-node_modules_datadog_browser-logs_esm_entries_main_js").then(() => (() => (__webpack_require__(/*! ./node_modules/@datadog/browser-logs/esm/entries/main.js */ "./node_modules/@datadog/browser-logs/esm/entries/main.js"))))));
+/******/ 					register("@emotion/react", "11.11.1", () => (Promise.all([__webpack_require__.e("vendors-node_modules_emotion_cache_dist_emotion-cache_browser_esm_js"), __webpack_require__.e("vendors-node_modules_emotion_serialize_dist_emotion-serialize_browser_esm_js-node_modules_emo-cbc221"), __webpack_require__.e("vendors-node_modules_emotion_react_dist_emotion-react_browser_esm_js"), __webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("node_modules_babel_runtime_helpers_esm_extends_js-node_modules_emotion_memoize_dist_emotion-m-27ec560")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@emotion/react/dist/emotion-react.browser.esm.js */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js"))))));
+/******/ 					register("@emotion/styled", "11.11.0", () => (Promise.all([__webpack_require__.e("vendors-node_modules_emotion_serialize_dist_emotion-serialize_browser_esm_js-node_modules_emo-cbc221"), __webpack_require__.e("vendors-node_modules_emotion_styled_dist_emotion-styled_browser_esm_js"), __webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-_8f22"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-_1cec"), __webpack_require__.e("node_modules_babel_runtime_helpers_esm_extends_js-node_modules_emotion_memoize_dist_emotion-m-27ec561")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js */ "./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js"))))));
+/******/ 					register("@mui/material", "5.13.5", () => (Promise.all([__webpack_require__.e("vendors-node_modules_emotion_cache_dist_emotion-cache_browser_esm_js"), __webpack_require__.e("vendors-node_modules_mui_material_index_js"), __webpack_require__.e("vendors-node_modules_emotion_memoize_dist_emotion-memoize_esm_js-node_modules_mui_material_Sw-53a992"), __webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("webpack_sharing_consume_default_react-dom"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-_8f22"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-webpack_sharing_consume_default_e-2f734f"), __webpack_require__.e("webpack_sharing_consume_default_popperjs_core_popperjs_core-_d4b1")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@mui/material/index.js */ "./node_modules/@mui/material/index.js"))))));
+/******/ 					register("@nem035/gpt-3-encoder", "1.1.7", () => (__webpack_require__.e("vendors-node_modules_nem035_gpt-3-encoder_index_js").then(() => (() => (__webpack_require__(/*! ./node_modules/@nem035/gpt-3-encoder/index.js */ "./node_modules/@nem035/gpt-3-encoder/index.js"))))));
+/******/ 					register("@popperjs/core", "2.11.8", () => (__webpack_require__.e("vendors-node_modules_popperjs_core_lib_index_js").then(() => (() => (__webpack_require__(/*! ./node_modules/@popperjs/core/lib/index.js */ "./node_modules/@popperjs/core/lib/index.js"))))));
+/******/ 					register("@react-spring/web", "9.7.2", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-spring_web_dist_esm_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("webpack_sharing_consume_default_react-dom")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@react-spring/web/dist/esm/index.js */ "./node_modules/@react-spring/web/dist/esm/index.js"))))));
+/******/ 					register("anaconda-assistant", "0.2.0", () => (Promise.all([__webpack_require__.e("vendors-node_modules_emotion_cache_dist_emotion-cache_browser_esm_js"), __webpack_require__.e("vendors-node_modules_emotion_memoize_dist_emotion-memoize_esm_js-node_modules_mui_material_Sw-53a992"), __webpack_require__.e("vendors-node_modules_jupyterlab_services_lib_kernel_messages_js-node_modules_zustand_esm_midd-34c8d8"), __webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-_8f22"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-webpack_sharing_consume_default_e-2f734f"), __webpack_require__.e("lib_components_assistant-button_js-lib_index_js-webpack_sharing_consume_default_lumino_coreut-d886ec")]).then(() => (() => (__webpack_require__(/*! ./lib/index.js */ "./lib/index.js"))))));
+/******/ 					register("immer", "10.0.2", () => (__webpack_require__.e("vendors-node_modules_immer_dist_immer_mjs").then(() => (() => (__webpack_require__(/*! ./node_modules/immer/dist/immer.mjs */ "./node_modules/immer/dist/immer.mjs"))))));
+/******/ 					register("launchdarkly-js-client-sdk", "3.1.3", () => (__webpack_require__.e("vendors-node_modules_launchdarkly-js-client-sdk_dist_ldclient_es_js").then(() => (() => (__webpack_require__(/*! ./node_modules/launchdarkly-js-client-sdk/dist/ldclient.es.js */ "./node_modules/launchdarkly-js-client-sdk/dist/ldclient.es.js"))))));
+/******/ 					register("lodash", "4.17.21", () => (__webpack_require__.e("vendors-node_modules_lodash_lodash_js").then(() => (() => (__webpack_require__(/*! ./node_modules/lodash/lodash.js */ "./node_modules/lodash/lodash.js"))))));
+/******/ 					register("prism-react-renderer", "1.3.5", () => (Promise.all([__webpack_require__.e("vendors-node_modules_prism-react-renderer_dist_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react")]).then(() => (() => (__webpack_require__(/*! ./node_modules/prism-react-renderer/dist/index.js */ "./node_modules/prism-react-renderer/dist/index.js"))))));
+/******/ 					register("react-error-boundary", "4.0.9", () => (Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("node_modules_react-error-boundary_dist_react-error-boundary_esm_js-_4d950")]).then(() => (() => (__webpack_require__(/*! ./node_modules/react-error-boundary/dist/react-error-boundary.esm.js */ "./node_modules/react-error-boundary/dist/react-error-boundary.esm.js"))))));
+/******/ 					register("react-popper", "2.3.0", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-popper_lib_esm_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("webpack_sharing_consume_default_react-dom"), __webpack_require__.e("webpack_sharing_consume_default_popperjs_core_popperjs_core-_5036")]).then(() => (() => (__webpack_require__(/*! ./node_modules/react-popper/lib/esm/index.js */ "./node_modules/react-popper/lib/esm/index.js"))))));
+/******/ 					register("use-resize-observer", "9.1.0", () => (Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react"), __webpack_require__.e("node_modules_use-resize-observer_dist_bundle_esm_js-_df660")]).then(() => (() => (__webpack_require__(/*! ./node_modules/use-resize-observer/dist/bundle.esm.js */ "./node_modules/use-resize-observer/dist/bundle.esm.js"))))));
+/******/ 					register("usehooks-ts", "2.9.1", () => (Promise.all([__webpack_require__.e("vendors-node_modules_usehooks-ts_dist_esm_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react")]).then(() => (() => (__webpack_require__(/*! ./node_modules/usehooks-ts/dist/esm/index.js */ "./node_modules/usehooks-ts/dist/esm/index.js"))))));
+/******/ 					register("uuid", "9.0.0", () => (__webpack_require__.e("vendors-node_modules_uuid_dist_esm-browser_index_js").then(() => (() => (__webpack_require__(/*! ./node_modules/uuid/dist/esm-browser/index.js */ "./node_modules/uuid/dist/esm-browser/index.js"))))));
+/******/ 					register("zod", "3.21.4", () => (__webpack_require__.e("vendors-node_modules_zod_lib_index_mjs").then(() => (() => (__webpack_require__(/*! ./node_modules/zod/lib/index.mjs */ "./node_modules/zod/lib/index.mjs"))))));
+/******/ 					register("zustand", "4.3.8", () => (Promise.all([__webpack_require__.e("vendors-node_modules_zustand_esm_index_mjs"), __webpack_require__.e("webpack_sharing_consume_default_react")]).then(() => (() => (__webpack_require__(/*! ./node_modules/zustand/esm/index.mjs */ "./node_modules/zustand/esm/index.mjs"))))));
+/******/ 				}
+/******/ 				break;
+/******/ 			}
+/******/ 			if(!promises.length) return initPromises[name] = 1;
+/******/ 			return initPromises[name] = Promise.all(promises).then(() => (initPromises[name] = 1));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/consumes */
+/******/ 	(() => {
+/******/ 		var parseVersion = (str) => {
+/******/ 			// see webpack/lib/util/semver.js for original code
+/******/ 			var p=p=>{return p.split(".").map((p=>{return+p==p?+p:p}))},n=/^([^-+]+)?(?:-([^+]+))?(?:\+(.+))?$/.exec(str),r=n[1]?p(n[1]):[];return n[2]&&(r.length++,r.push.apply(r,p(n[2]))),n[3]&&(r.push([]),r.push.apply(r,p(n[3]))),r;
+/******/ 		}
+/******/ 		var versionLt = (a, b) => {
+/******/ 			// see webpack/lib/util/semver.js for original code
+/******/ 			a=parseVersion(a),b=parseVersion(b);for(var r=0;;){if(r>=a.length)return r<b.length&&"u"!=(typeof b[r])[0];var e=a[r],n=(typeof e)[0];if(r>=b.length)return"u"==n;var t=b[r],f=(typeof t)[0];if(n!=f)return"o"==n&&"n"==f||("s"==f||"u"==n);if("o"!=n&&"u"!=n&&e!=t)return e<t;r++}
+/******/ 		}
+/******/ 		var rangeToString = (range) => {
+/******/ 			// see webpack/lib/util/semver.js for original code
+/******/ 			var r=range[0],n="";if(1===range.length)return"*";if(r+.5){n+=0==r?">=":-1==r?"<":1==r?"^":2==r?"~":r>0?"=":"!=";for(var e=1,a=1;a<range.length;a++){e--,n+="u"==(typeof(t=range[a]))[0]?"-":(e>0?".":"")+(e=2,t)}return n}var g=[];for(a=1;a<range.length;a++){var t=range[a];g.push(0===t?"not("+o()+")":1===t?"("+o()+" || "+o()+")":2===t?g.pop()+" "+g.pop():rangeToString(t))}return o();function o(){return g.pop().replace(/^\((.+)\)$/,"$1")}
+/******/ 		}
+/******/ 		var satisfy = (range, version) => {
+/******/ 			// see webpack/lib/util/semver.js for original code
+/******/ 			if(0 in range){version=parseVersion(version);var e=range[0],r=e<0;r&&(e=-e-1);for(var n=0,i=1,a=!0;;i++,n++){var f,s,g=i<range.length?(typeof range[i])[0]:"";if(n>=version.length||"o"==(s=(typeof(f=version[n]))[0]))return!a||("u"==g?i>e&&!r:""==g!=r);if("u"==s){if(!a||"u"!=g)return!1}else if(a)if(g==s)if(i<=e){if(f!=range[i])return!1}else{if(r?f>range[i]:f<range[i])return!1;f!=range[i]&&(a=!1)}else if("s"!=g&&"n"!=g){if(r||i<=e)return!1;a=!1,i--}else{if(i<=e||s<g!=r)return!1;a=!1}else"s"!=g&&"n"!=g&&(a=!1,i--)}}var t=[],o=t.pop.bind(t);for(n=1;n<range.length;n++){var u=range[n];t.push(1==u?o()|o():2==u?o()&o():u?satisfy(u,version):!o())}return!!o();
+/******/ 		}
+/******/ 		var ensureExistence = (scopeName, key) => {
+/******/ 			var scope = __webpack_require__.S[scopeName];
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) throw new Error("Shared module " + key + " doesn't exist in shared scope " + scopeName);
+/******/ 			return scope;
+/******/ 		};
+/******/ 		var findVersion = (scope, key) => {
+/******/ 			var versions = scope[key];
+/******/ 			var key = Object.keys(versions).reduce((a, b) => {
+/******/ 				return !a || versionLt(a, b) ? b : a;
+/******/ 			}, 0);
+/******/ 			return key && versions[key]
+/******/ 		};
+/******/ 		var findSingletonVersionKey = (scope, key) => {
+/******/ 			var versions = scope[key];
+/******/ 			return Object.keys(versions).reduce((a, b) => {
+/******/ 				return !a || (!versions[a].loaded && versionLt(a, b)) ? b : a;
+/******/ 			}, 0);
+/******/ 		};
+/******/ 		var getInvalidSingletonVersionMessage = (scope, key, version, requiredVersion) => {
+/******/ 			return "Unsatisfied version " + version + " from " + (version && scope[key][version].from) + " of shared singleton module " + key + " (required " + rangeToString(requiredVersion) + ")"
+/******/ 		};
+/******/ 		var getSingleton = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var version = findSingletonVersionKey(scope, key);
+/******/ 			return get(scope[key][version]);
+/******/ 		};
+/******/ 		var getSingletonVersion = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var version = findSingletonVersionKey(scope, key);
+/******/ 			if (!satisfy(requiredVersion, version)) typeof console !== "undefined" && console.warn && console.warn(getInvalidSingletonVersionMessage(scope, key, version, requiredVersion));
+/******/ 			return get(scope[key][version]);
+/******/ 		};
+/******/ 		var getStrictSingletonVersion = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var version = findSingletonVersionKey(scope, key);
+/******/ 			if (!satisfy(requiredVersion, version)) throw new Error(getInvalidSingletonVersionMessage(scope, key, version, requiredVersion));
+/******/ 			return get(scope[key][version]);
+/******/ 		};
+/******/ 		var findValidVersion = (scope, key, requiredVersion) => {
+/******/ 			var versions = scope[key];
+/******/ 			var key = Object.keys(versions).reduce((a, b) => {
+/******/ 				if (!satisfy(requiredVersion, b)) return a;
+/******/ 				return !a || versionLt(a, b) ? b : a;
+/******/ 			}, 0);
+/******/ 			return key && versions[key]
+/******/ 		};
+/******/ 		var getInvalidVersionMessage = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var versions = scope[key];
+/******/ 			return "No satisfying version (" + rangeToString(requiredVersion) + ") of shared module " + key + " found in shared scope " + scopeName + ".\n" +
+/******/ 				"Available versions: " + Object.keys(versions).map((key) => {
+/******/ 				return key + " from " + versions[key].from;
+/******/ 			}).join(", ");
+/******/ 		};
+/******/ 		var getValidVersion = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var entry = findValidVersion(scope, key, requiredVersion);
+/******/ 			if(entry) return get(entry);
+/******/ 			throw new Error(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
+/******/ 		};
+/******/ 		var warnInvalidVersion = (scope, scopeName, key, requiredVersion) => {
+/******/ 			typeof console !== "undefined" && console.warn && console.warn(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
+/******/ 		};
+/******/ 		var get = (entry) => {
+/******/ 			entry.loaded = 1;
+/******/ 			return entry.get()
+/******/ 		};
+/******/ 		var init = (fn) => (function(scopeName, a, b, c) {
+/******/ 			var promise = __webpack_require__.I(scopeName);
+/******/ 			if (promise && promise.then) return promise.then(fn.bind(fn, scopeName, __webpack_require__.S[scopeName], a, b, c));
+/******/ 			return fn(scopeName, __webpack_require__.S[scopeName], a, b, c);
+/******/ 		});
+/******/ 		
+/******/ 		var load = /*#__PURE__*/ init((scopeName, scope, key) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return get(findVersion(scope, key));
+/******/ 		});
+/******/ 		var loadFallback = /*#__PURE__*/ init((scopeName, scope, key, fallback) => {
+/******/ 			return scope && __webpack_require__.o(scope, key) ? get(findVersion(scope, key)) : fallback();
+/******/ 		});
+/******/ 		var loadVersionCheck = /*#__PURE__*/ init((scopeName, scope, key, version) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return get(findValidVersion(scope, key, version) || warnInvalidVersion(scope, scopeName, key, version) || findVersion(scope, key));
+/******/ 		});
+/******/ 		var loadSingleton = /*#__PURE__*/ init((scopeName, scope, key) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return getSingleton(scope, scopeName, key);
+/******/ 		});
+/******/ 		var loadSingletonVersionCheck = /*#__PURE__*/ init((scopeName, scope, key, version) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return getSingletonVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var loadStrictVersionCheck = /*#__PURE__*/ init((scopeName, scope, key, version) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return getValidVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var loadStrictSingletonVersionCheck = /*#__PURE__*/ init((scopeName, scope, key, version) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return getStrictSingletonVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var loadVersionCheckFallback = /*#__PURE__*/ init((scopeName, scope, key, version, fallback) => {
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) return fallback();
+/******/ 			return get(findValidVersion(scope, key, version) || warnInvalidVersion(scope, scopeName, key, version) || findVersion(scope, key));
+/******/ 		});
+/******/ 		var loadSingletonFallback = /*#__PURE__*/ init((scopeName, scope, key, fallback) => {
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) return fallback();
+/******/ 			return getSingleton(scope, scopeName, key);
+/******/ 		});
+/******/ 		var loadSingletonVersionCheckFallback = /*#__PURE__*/ init((scopeName, scope, key, version, fallback) => {
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) return fallback();
+/******/ 			return getSingletonVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var loadStrictVersionCheckFallback = /*#__PURE__*/ init((scopeName, scope, key, version, fallback) => {
+/******/ 			var entry = scope && __webpack_require__.o(scope, key) && findValidVersion(scope, key, version);
+/******/ 			return entry ? get(entry) : fallback();
+/******/ 		});
+/******/ 		var loadStrictSingletonVersionCheckFallback = /*#__PURE__*/ init((scopeName, scope, key, version, fallback) => {
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) return fallback();
+/******/ 			return getStrictSingletonVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var installedModules = {};
+/******/ 		var moduleToHandlerMapping = {
+/******/ 			"webpack/sharing/consume/default/react": () => (loadSingletonVersionCheck("default", "react", [1,17,0,1])),
+/******/ 			"webpack/sharing/consume/default/@emotion/react/@emotion/react?8f22": () => (loadFallback("default", "@emotion/react", () => (Promise.all([__webpack_require__.e("vendors-node_modules_emotion_cache_dist_emotion-cache_browser_esm_js"), __webpack_require__.e("vendors-node_modules_emotion_serialize_dist_emotion-serialize_browser_esm_js-node_modules_emo-cbc221"), __webpack_require__.e("vendors-node_modules_emotion_react_dist_emotion-react_browser_esm_js")]).then(() => (() => (__webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@emotion/styled/@emotion/styled": () => (loadStrictVersionCheckFallback("default", "@emotion/styled", [1,11,3,0], () => (Promise.all([__webpack_require__.e("vendors-node_modules_emotion_serialize_dist_emotion-serialize_browser_esm_js-node_modules_emo-cbc221"), __webpack_require__.e("vendors-node_modules_emotion_styled_dist_emotion-styled_browser_esm_js"), __webpack_require__.e("webpack_sharing_consume_default_emotion_react_emotion_react-_1cec")]).then(() => (() => (__webpack_require__(/*! @emotion/styled */ "./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@emotion/react/@emotion/react?9405": () => (loadStrictVersionCheckFallback("default", "@emotion/react", [1,11,4,1], () => (Promise.all([__webpack_require__.e("vendors-node_modules_emotion_serialize_dist_emotion-serialize_browser_esm_js-node_modules_emo-cbc221"), __webpack_require__.e("vendors-node_modules_emotion_react_dist_emotion-react_browser_esm_js")]).then(() => (() => (__webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@jupyterlab/application": () => (loadSingletonVersionCheck("default", "@jupyterlab/application", [1,3,5,3])),
+/******/ 			"webpack/sharing/consume/default/@jupyterlab/apputils": () => (loadSingletonVersionCheck("default", "@jupyterlab/apputils", [1,3,5,3])),
+/******/ 			"webpack/sharing/consume/default/@jupyterlab/notebook": () => (loadSingletonVersionCheck("default", "@jupyterlab/notebook", [1,3,5,3])),
+/******/ 			"webpack/sharing/consume/default/@jupyterlab/cells": () => (loadVersionCheck("default", "@jupyterlab/cells", [1,3,5,3])),
+/******/ 			"webpack/sharing/consume/default/launchdarkly-js-client-sdk/launchdarkly-js-client-sdk": () => (loadStrictVersionCheckFallback("default", "launchdarkly-js-client-sdk", [1,3,1,3], () => (__webpack_require__.e("vendors-node_modules_launchdarkly-js-client-sdk_dist_ldclient_es_js").then(() => (() => (__webpack_require__(/*! launchdarkly-js-client-sdk */ "./node_modules/launchdarkly-js-client-sdk/dist/ldclient.es.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@jupyterlab/coreutils": () => (loadSingletonVersionCheck("default", "@jupyterlab/coreutils", [1,5,5,3])),
+/******/ 			"webpack/sharing/consume/default/@jupyterlab/services": () => (loadSingletonVersionCheck("default", "@jupyterlab/services", [1,6,5,3])),
+/******/ 			"webpack/sharing/consume/default/@datadog/browser-logs/@datadog/browser-logs": () => (loadStrictVersionCheckFallback("default", "@datadog/browser-logs", [1,4,42,2], () => (__webpack_require__.e("vendors-node_modules_datadog_browser-logs_esm_entries_main_js").then(() => (() => (__webpack_require__(/*! @datadog/browser-logs */ "./node_modules/@datadog/browser-logs/esm/entries/main.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@jupyterlab/ui-components": () => (loadSingletonVersionCheck("default", "@jupyterlab/ui-components", [1,3,5,3])),
+/******/ 			"webpack/sharing/consume/default/zustand/zustand": () => (loadStrictVersionCheckFallback("default", "zustand", [1,4,3,8], () => (__webpack_require__.e("vendors-node_modules_zustand_esm_index_mjs").then(() => (() => (__webpack_require__(/*! zustand */ "./node_modules/zustand/esm/index.mjs"))))))),
+/******/ 			"webpack/sharing/consume/default/immer/immer?6944": () => (loadStrictVersionCheckFallback("default", "immer", [0,9,0], () => (__webpack_require__.e("vendors-node_modules_immer_dist_immer_mjs").then(() => (() => (__webpack_require__(/*! immer */ "./node_modules/immer/dist/immer.mjs"))))))),
+/******/ 			"webpack/sharing/consume/default/uuid/uuid": () => (loadStrictVersionCheckFallback("default", "uuid", [1,9,0,0], () => (__webpack_require__.e("vendors-node_modules_uuid_dist_esm-browser_index_js").then(() => (() => (__webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/immer/immer?6095": () => (loadStrictVersionCheckFallback("default", "immer", [1,10,0,2], () => (__webpack_require__.e("vendors-node_modules_immer_dist_immer_mjs").then(() => (() => (__webpack_require__(/*! immer */ "./node_modules/immer/dist/immer.mjs"))))))),
+/******/ 			"webpack/sharing/consume/default/lodash/lodash": () => (loadStrictVersionCheckFallback("default", "lodash", [1,4,17,21], () => (__webpack_require__.e("vendors-node_modules_lodash_lodash_js").then(() => (() => (__webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"))))))),
+/******/ 			"webpack/sharing/consume/default/zod/zod": () => (loadStrictVersionCheckFallback("default", "zod", [1,3,21,4], () => (__webpack_require__.e("vendors-node_modules_zod_lib_index_mjs").then(() => (() => (__webpack_require__(/*! zod */ "./node_modules/zod/lib/index.mjs"))))))),
+/******/ 			"webpack/sharing/consume/default/@lumino/widgets": () => (loadSingletonVersionCheck("default", "@lumino/widgets", [1,1,33,0])),
+/******/ 			"webpack/sharing/consume/default/@lumino/coreutils": () => (loadSingletonVersionCheck("default", "@lumino/coreutils", [1,1,11,0])),
+/******/ 			"webpack/sharing/consume/default/usehooks-ts/usehooks-ts": () => (loadStrictVersionCheckFallback("default", "usehooks-ts", [1,2,9,1], () => (__webpack_require__.e("vendors-node_modules_usehooks-ts_dist_esm_index_js").then(() => (() => (__webpack_require__(/*! usehooks-ts */ "./node_modules/usehooks-ts/dist/esm/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/react-error-boundary/react-error-boundary": () => (loadStrictVersionCheckFallback("default", "react-error-boundary", [1,4,0,9], () => (__webpack_require__.e("node_modules_react-error-boundary_dist_react-error-boundary_esm_js-_4d951").then(() => (() => (__webpack_require__(/*! react-error-boundary */ "./node_modules/react-error-boundary/dist/react-error-boundary.esm.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@mui/material/@mui/material": () => (loadStrictVersionCheckFallback("default", "@mui/material", [1,5,13,5], () => (Promise.all([__webpack_require__.e("vendors-node_modules_mui_material_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react-dom"), __webpack_require__.e("webpack_sharing_consume_default_popperjs_core_popperjs_core-_d4b1")]).then(() => (() => (__webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/use-resize-observer/use-resize-observer": () => (loadStrictVersionCheckFallback("default", "use-resize-observer", [1,9,1,0], () => (__webpack_require__.e("node_modules_use-resize-observer_dist_bundle_esm_js-_df661").then(() => (() => (__webpack_require__(/*! use-resize-observer */ "./node_modules/use-resize-observer/dist/bundle.esm.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@react-spring/web/@react-spring/web": () => (loadStrictVersionCheckFallback("default", "@react-spring/web", [1,9,7,2], () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-spring_web_dist_esm_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react-dom")]).then(() => (() => (__webpack_require__(/*! @react-spring/web */ "./node_modules/@react-spring/web/dist/esm/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/prism-react-renderer/prism-react-renderer": () => (loadStrictVersionCheckFallback("default", "prism-react-renderer", [1,1,3,5], () => (__webpack_require__.e("vendors-node_modules_prism-react-renderer_dist_index_js").then(() => (() => (__webpack_require__(/*! prism-react-renderer */ "./node_modules/prism-react-renderer/dist/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/react-popper/react-popper": () => (loadStrictVersionCheckFallback("default", "react-popper", [1,2,3,0], () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-popper_lib_esm_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react-dom"), __webpack_require__.e("webpack_sharing_consume_default_popperjs_core_popperjs_core-_5036")]).then(() => (() => (__webpack_require__(/*! react-popper */ "./node_modules/react-popper/lib/esm/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@nem035/gpt-3-encoder/@nem035/gpt-3-encoder": () => (loadStrictVersionCheckFallback("default", "@nem035/gpt-3-encoder", [1,1,1,7], () => (__webpack_require__.e("vendors-node_modules_nem035_gpt-3-encoder_index_js").then(() => (() => (__webpack_require__(/*! @nem035/gpt-3-encoder */ "./node_modules/@nem035/gpt-3-encoder/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@emotion/react/@emotion/react?1cec": () => (loadStrictVersionCheckFallback("default", "@emotion/react", [1,11,0,0,,"rc",0], () => (Promise.all([__webpack_require__.e("vendors-node_modules_emotion_cache_dist_emotion-cache_browser_esm_js"), __webpack_require__.e("vendors-node_modules_emotion_react_dist_emotion-react_browser_esm_js")]).then(() => (() => (__webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js"))))))),
+/******/ 			"webpack/sharing/consume/default/react-dom": () => (loadSingletonVersionCheck("default", "react-dom", [1,17,0,1])),
+/******/ 			"webpack/sharing/consume/default/@popperjs/core/@popperjs/core?d4b1": () => (loadFallback("default", "@popperjs/core", () => (__webpack_require__.e("vendors-node_modules_popperjs_core_lib_index_js").then(() => (() => (__webpack_require__(/*! @popperjs/core */ "./node_modules/@popperjs/core/lib/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/@popperjs/core/@popperjs/core?5036": () => (loadStrictVersionCheckFallback("default", "@popperjs/core", [1,2,0,0], () => (__webpack_require__.e("vendors-node_modules_popperjs_core_lib_index_js").then(() => (() => (__webpack_require__(/*! @popperjs/core */ "./node_modules/@popperjs/core/lib/index.js")))))))
+/******/ 		};
+/******/ 		// no consumes in initial chunks
+/******/ 		var chunkMapping = {
+/******/ 			"webpack_sharing_consume_default_react": [
+/******/ 				"webpack/sharing/consume/default/react"
+/******/ 			],
+/******/ 			"webpack_sharing_consume_default_emotion_react_emotion_react-_8f22": [
+/******/ 				"webpack/sharing/consume/default/@emotion/react/@emotion/react?8f22"
+/******/ 			],
+/******/ 			"webpack_sharing_consume_default_emotion_react_emotion_react-webpack_sharing_consume_default_e-2f734f": [
+/******/ 				"webpack/sharing/consume/default/@emotion/styled/@emotion/styled",
+/******/ 				"webpack/sharing/consume/default/@emotion/react/@emotion/react?9405"
+/******/ 			],
+/******/ 			"lib_components_assistant-button_js-lib_index_js-webpack_sharing_consume_default_lumino_coreut-d886ec": [
+/******/ 				"webpack/sharing/consume/default/@jupyterlab/application",
+/******/ 				"webpack/sharing/consume/default/@jupyterlab/apputils",
+/******/ 				"webpack/sharing/consume/default/@jupyterlab/notebook",
+/******/ 				"webpack/sharing/consume/default/@jupyterlab/cells",
+/******/ 				"webpack/sharing/consume/default/launchdarkly-js-client-sdk/launchdarkly-js-client-sdk",
+/******/ 				"webpack/sharing/consume/default/@jupyterlab/coreutils",
+/******/ 				"webpack/sharing/consume/default/@jupyterlab/services",
+/******/ 				"webpack/sharing/consume/default/@datadog/browser-logs/@datadog/browser-logs",
+/******/ 				"webpack/sharing/consume/default/@jupyterlab/ui-components",
+/******/ 				"webpack/sharing/consume/default/zustand/zustand",
+/******/ 				"webpack/sharing/consume/default/immer/immer?6944",
+/******/ 				"webpack/sharing/consume/default/uuid/uuid",
+/******/ 				"webpack/sharing/consume/default/immer/immer?6095",
+/******/ 				"webpack/sharing/consume/default/lodash/lodash",
+/******/ 				"webpack/sharing/consume/default/zod/zod",
+/******/ 				"webpack/sharing/consume/default/@lumino/widgets",
+/******/ 				"webpack/sharing/consume/default/@lumino/coreutils",
+/******/ 				"webpack/sharing/consume/default/usehooks-ts/usehooks-ts",
+/******/ 				"webpack/sharing/consume/default/react-error-boundary/react-error-boundary",
+/******/ 				"webpack/sharing/consume/default/@mui/material/@mui/material",
+/******/ 				"webpack/sharing/consume/default/use-resize-observer/use-resize-observer",
+/******/ 				"webpack/sharing/consume/default/@react-spring/web/@react-spring/web",
+/******/ 				"webpack/sharing/consume/default/prism-react-renderer/prism-react-renderer",
+/******/ 				"webpack/sharing/consume/default/react-popper/react-popper",
+/******/ 				"webpack/sharing/consume/default/@nem035/gpt-3-encoder/@nem035/gpt-3-encoder"
+/******/ 			],
+/******/ 			"webpack_sharing_consume_default_emotion_react_emotion_react-_1cec": [
+/******/ 				"webpack/sharing/consume/default/@emotion/react/@emotion/react?1cec"
+/******/ 			],
+/******/ 			"webpack_sharing_consume_default_react-dom": [
+/******/ 				"webpack/sharing/consume/default/react-dom"
+/******/ 			],
+/******/ 			"webpack_sharing_consume_default_popperjs_core_popperjs_core-_d4b1": [
+/******/ 				"webpack/sharing/consume/default/@popperjs/core/@popperjs/core?d4b1"
+/******/ 			],
+/******/ 			"webpack_sharing_consume_default_popperjs_core_popperjs_core-_5036": [
+/******/ 				"webpack/sharing/consume/default/@popperjs/core/@popperjs/core?5036"
+/******/ 			]
+/******/ 		};
+/******/ 		__webpack_require__.f.consumes = (chunkId, promises) => {
+/******/ 			if(__webpack_require__.o(chunkMapping, chunkId)) {
+/******/ 				chunkMapping[chunkId].forEach((id) => {
+/******/ 					if(__webpack_require__.o(installedModules, id)) return promises.push(installedModules[id]);
+/******/ 					var onFactory = (factory) => {
+/******/ 						installedModules[id] = 0;
+/******/ 						__webpack_require__.m[id] = (module) => {
+/******/ 							delete __webpack_require__.c[id];
+/******/ 							module.exports = factory();
+/******/ 						}
+/******/ 					};
+/******/ 					var onError = (error) => {
+/******/ 						delete installedModules[id];
+/******/ 						__webpack_require__.m[id] = (module) => {
+/******/ 							delete __webpack_require__.c[id];
+/******/ 							throw error;
+/******/ 						}
+/******/ 					};
+/******/ 					try {
+/******/ 						var promise = moduleToHandlerMapping[id]();
+/******/ 						if(promise.then) {
+/******/ 							promises.push(installedModules[id] = promise.then(onFactory)['catch'](onError));
+/******/ 						} else onFactory(promise);
+/******/ 					} catch(e) { onError(e); }
+/******/ 				});
+/******/ 			}
+/******/ 		}
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"anaconda-assistant": 0
+/******/ 		};
+/******/ 		
+/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
+/******/ 				// JSONP chunk loading for javascript
+/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
+/******/ 		
+/******/ 					// a Promise means "currently loading".
+/******/ 					if(installedChunkData) {
+/******/ 						promises.push(installedChunkData[2]);
+/******/ 					} else {
+/******/ 						if(!/^webpack_sharing_consume_default_(emotion_react_emotion_react\-(_1cec|_8f22|webpack_sharing_consume_default_e\-2f734f)|popperjs_core_popperjs_core\-_(5036|d4b1)|react(|\-dom))$/.test(chunkId)) {
+/******/ 							// setup Promise in chunk cache
+/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
+/******/ 							promises.push(installedChunkData[2] = promise);
+/******/ 		
+/******/ 							// start chunk loading
+/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
+/******/ 							// create error before stack unwound to get useful stacktrace later
+/******/ 							var error = new Error();
+/******/ 							var loadingEnded = (event) => {
+/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
+/******/ 									installedChunkData = installedChunks[chunkId];
+/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
+/******/ 									if(installedChunkData) {
+/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 										var realSrc = event && event.target && event.target.src;
+/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 										error.name = 'ChunkLoadError';
+/******/ 										error.type = errorType;
+/******/ 										error.request = realSrc;
+/******/ 										installedChunkData[1](error);
+/******/ 									}
+/******/ 								}
+/******/ 							};
+/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
+/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 					}
+/******/ 				}
+/******/ 		};
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 		
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkanaconda_assistant"] = self["webpackChunkanaconda_assistant"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// module cache are used so entry inlining is disabled
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/anaconda-assistant");
+/******/ 	(_JUPYTERLAB = typeof _JUPYTERLAB === "undefined" ? {} : _JUPYTERLAB)["anaconda-assistant"] = __webpack_exports__;
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=remoteEntry.7a78d8fee6c1ae9ba6b4.js.map
